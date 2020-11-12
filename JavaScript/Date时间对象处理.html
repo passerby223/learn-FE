@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <script>
+        var d = new Date();
+        var weekday = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+        var myDay = d.getDate();
+        var myMonth = d.getMonth() + 1;
+        var myYear = d.getFullYear();
+        var Day_of_the_week = d.getDay();
+        document.write("今天是" + myYear + "年" + myMonth + "月" + myDay + "日" + weekday[Day_of_the_week] + "<br/>");
+        var time = d.getHours();
+        if (time < 12) {
+            document.write("早上好！" + "<br/>");    //如果小时数小于12则输出“早上好！”
+        } else if (time >= 12 && time < 18) {
+            document.write("下午好！" + "<br/>");    //如果小时数大于等于12并且小于18，输出“下午好！”
+        } else {
+            document.write("晚上好！" + "<br/>");    //如果上面两个条件都不符合，则输出“晚上好！”
+        }
+        var myHours = d.getHours();
+        var myMinutes = d.getMinutes();
+        var mySeconds = d.getSeconds();
+        document.write("当前时间是：" + myHours + ":" + myMinutes + ":" + mySeconds);
+    </script>
+</head>
+<body>
+</body>
+</html>
