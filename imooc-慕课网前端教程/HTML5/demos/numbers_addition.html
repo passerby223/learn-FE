@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type='text' id='num1'> + <input type='text' id='num2'> = <input type='text' id='res'>
+<button onclick='count()'>计算结果</button><!-- 点击按钮实现计算 -->
+<script>
+    function count() {
+        if (isNaN(document.getElementById('num1').value) || isNaN(document.getElementById('num2').value)) return alert("请输入正确的数字");//判断输入数字是否合法
+        document.getElementById('res').value = parseFloat(document.getElementById("num1").value) + parseFloat(document.getElementById("num2").value);//将结果输出
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    .col-xs-4
+    <br>
+    Since 9 + 4 = 13 > 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.
+</div>
+<div>
+    .col-xs-6
+    <br>
+    Subsequent columns continue along the new line.
+</div>
+<div>
+    <li>
+        <code>required</code>: <code>Boolean</code>
+        <br>
+        Defines if the prop is required. In a non-production environment, a console warning will be thrown if this value
+        is truthy and the prop is not passed.
+    </li>
+    <li>
+        <code>validator</code>:
+        <code>Function</code>
+        <br>
+        Custom validator function that takes the prop value as the sole argument. In a non-production environment, a
+        console warning will be thrown if this function returns a falsy value (i.e. the validation fails). You can read
+        more about prop validation
+        <a>here</a>.
+    </li>
+</div>
+</body>
+</html>

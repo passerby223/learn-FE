@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <img src="https://wiki-code.oss-cn-beijing.aliyuncs.com/html5/img/loading.png" alt="1"
+         data-src="https://wiki-code.oss-cn-beijing.aliyuncs.com/html5/img/photo-3.png">
+    <img src="https://wiki-code.oss-cn-beijing.aliyuncs.com/html5/img/loading.png" alt="2"
+         data-src="https://wiki-code.oss-cn-beijing.aliyuncs.com/html5/img/photo-3.png">
+    <img src="https://wiki-code.oss-cn-beijing.aliyuncs.com/html5/img/loading.png" alt="3"
+         data-src="https://wiki-code.oss-cn-beijing.aliyuncs.com/html5/img/photo-3.png">
+</div>
+<script>
+    window.onload = function () {//页面加载完之后再加载图片
+        let a = document.getElementsByTagName("img");//获取图片DOM
+        console.log(a)
+        for (let i of a) {
+            i.src = i.getAttribute('data-src')
+        }
+    }
+</script>
+</body>
+</html>

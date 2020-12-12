@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+    <div>
+        <label for="loginname"></label>
+        <input id="loginname" type="text" placeholder="邮箱/用户名/登录手机">
+    </div>
+    <div id="entry" class="item item-fore2">
+        <label class="login-label pwd-label" for="nloginpwd"></label>
+        <input type="password" id="nloginpwd" placeholder="密码">
+        <span><b>大小写锁定已打开</b></span>
+    </div>
+    <div>
+        <div>
+        <span>
+          <a href="//passport.jd.com/uc/links?tag=safe">忘记密码</a>
+          </span>
+        </div>
+    </div>
+    <div>
+        <div>
+            <a href="javascript:;">登    录</a>
+        </div>
+    </div>
+</form>
+<hr>
+<form id="new_session" action="/sessions" method="post">
+    <div>
+        <input placeholder="手机号或邮箱" type="text">
+    </div>
+    <div>
+        <input placeholder="密码" type="password">
+    </div>
+    <div>
+        <input type="checkbox"><span>记住我</span>
+    </div>
+    <div>
+        <a href="">登录遇到问题?</a>
+        <ul>
+            <li><a href="/users/password/mobile_reset">用手机号重置密码</a></li>
+            <li><a href="/users/password/email_reset">用邮箱重置密码</a></li>
+            <li><a target="_blank" href="/p/9058d0b8711d">无法用海外手机号登录</a></li>
+            <li><a target="_blank" href="/p/498a9fa7da08">无法用 Google 帐号登录</a></li>
+        </ul>
+    </div>
+    <button>
+        <span></span>
+        登录
+    </button>
+</form>
+
+
+</body>
+</html>
