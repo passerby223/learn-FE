@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="container"></div>
+<script>
+    // 遍历数组
+    var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    var lis = '';
+    for (i = 0; i < arr.length; i++) {
+        lis += '<li>' + arr[i] + '</li>';
+    }
+    var ul = '<ul>' + lis + '</ul>';
+    // document.getElementById('container').innerText = ul;
+    document.getElementById('container').innerHTML = ul;
+    // 遍历对象
+    var obj1 = {
+        name: "小花花",
+        age: 21,
+        gender: '女',
+        hobby: ['打篮球', '唱歌'],
+    };
+    for (key in obj1) {
+        console.log(key + '：' + obj1[key])
+    }
+    // 求质数
+    var num = 17;
+    var flag = false;
+    var len;
+    var i;
+    for (i = 2, len = 17 - 1; i <= len; i++) {
+        if (num % i === 0) {
+            flag = true;
+            break; // break可以中断循环
+        }
+    }
+    // 输出："17是质数"
+    if (flag) {
+        console.log(num + '不是质数');
+    } else {
+        console.log(num + '是质数');
+    }
+
+    // 计算阶乘
+    var number = 4;
+    var result = 1;
+    for (k = number; k > 1; k--) {
+        result *= k;
+    }
+    console.log(number + '的阶乘的结果为：' + result)
+
+</script>
+</body>
+</html>
