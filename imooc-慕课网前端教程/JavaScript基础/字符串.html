@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var str1 = '第一行\n第二行\n第三行';
+
+    console.log(str1); // 将会输出换行的字符串
+    var str2 = '第一行\t第二行\t第三行';
+
+    console.log(str2); // 将会输出换行的字符串
+    console.log("--------------------------------------描述文案------------------------------------")
+
+    function gameover(age) {
+        // 判断是否游戏结束
+        return age > 300;
+    }
+
+    var isGameover = gameover(666);
+
+    if (isGameover) {
+        console.log('游戏结束');
+    }
+    console.log("--------------------------------------循环------------------------------------")
+
+    function something() {
+        console.log('循环开始之前');
+
+        var i
+        for (i = 0; i < 10; i++) {
+            console.log('循环中，第 ' + (i + 1) + ' 次循环');
+        }
+
+        console.log('循环结束');
+    }
+
+    something();
+
+    console.log("-------------------------------------拼接HTML------------------------------------")
+
+    function getList(content) {
+        return '<li class="list-item">' + content + '</li>';
+    }
+
+    var arr = [];
+
+    var i;
+    for (i = 1; i <= 10; i++) {
+        arr.push(getList('我是第' + i + '条'));
+    }
+
+    document.body.innerHTML = [
+        '<ul class="list">',
+        arr.join(''),
+        '</ul>',
+    ].join('');
+
+    var isMan = 'false';
+
+    if (isMan === 'false') {
+        console.log('不是男的');
+    }
+
+    console.log("-------------------------------------字符串切割---------------------------------")
+    var str3 = '一二三四五六七,7654321';
+    console.log(str3.split(','))
+    console.log("--------------------------------------concat拼接字符串--------------------------")
+    var str4 = '教练';
+    var str5 = '我想';
+    var str6 = '写代码';
+
+    var str7 = str4.concat(str5, str6);
+
+    console.log(str7);
+
+
+</script>
+</body>
+</html>
