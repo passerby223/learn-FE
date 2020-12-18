@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arrayLike = {
+        0: '9',
+        1: '9',
+        2: '6',
+        3: ' bye!',
+        length: 4,
+    };
+
+    var str = Array.from(arrayLike).join('');
+
+    console.log(str); // 输出：996 bye!
+
+</script>
+</body>
+</html>

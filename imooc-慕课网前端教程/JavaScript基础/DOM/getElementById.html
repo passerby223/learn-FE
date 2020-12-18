@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>哈哈啊</p>
+<a id="baidu" href="https://www.baidu.com">点我前往慕课网</a>
+<div id="html-element">我是一个元素</div>
+<script>
+    var el = document.getElementById("baidu");
+    // 通过修改dom节点的innerText属性就可以改掉文案。
+    el.innerText = "点我前往百度首页";
+    // 通过遍历 document 对象的属性，来观察一个 DOM 节点都有些什么属性和方法。
+    for (var i in document) {
+        console.log(i, document[i])
+    }
+    var el1 = document.getElementById("html-element");
+    el1.innerHTML = "<a href='https://www.baidu.com/'>我由div标签变成了a标签百度一下</a>";
+
+</script>
+</body>
+</html>

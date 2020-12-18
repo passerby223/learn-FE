@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <div class="odd">1</div>
+    <div class="even">2</div>
+    <div class="odd">3</div>
+    <div class="even">4</div>
+    <div class="odd">5</div>
+    <div class="even">6</div>
+</div>
+<div id="result"></div>
+<script>
+    var odd = document.getElementsByClassName('odd');
+
+    var res = [];
+
+    var i, len;
+    for (i = 0, len = odd.length; i < len; i++) {
+        res.push(odd[i].innerText);
+    }
+
+    var resultElement = document.getElementById('result');
+
+    resultElement.innerHTML = '所有奇数：<br>' + res.join('<br>');
+</script>
+</body>
+</html>

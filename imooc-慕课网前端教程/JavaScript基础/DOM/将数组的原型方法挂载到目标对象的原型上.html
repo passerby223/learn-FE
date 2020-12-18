@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <ul>
+        <li>i</li>
+        <li>love</li>
+        <li>imooc</li>
+    </ul>
+</div>
+
+<script>
+    NodeList.prototype.join = Array.prototype.join; // 提供 join 方法
+
+    var lisColl = document.querySelectorAll('li');
+
+    lisColl.__proto__.map = Array.prototype.map; // 提供 map 方法
+
+    var map = function (li) {
+        return li.innerText;
+    };
+
+    console.log(lisColl.map(map).join(' ')); // 输出：i love imooc
+</script>
+</body>
+</html>

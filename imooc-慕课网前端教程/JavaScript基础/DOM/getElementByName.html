@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <div>
+        <label>
+            <input type="checkbox" name="skill" checked="checked" value="JavaScript"> JavaScript
+        </label>
+
+        <label>
+            <input type="checkbox" name="skill" value="c++"> C++
+        </label>
+
+        <label>
+            <input type="checkbox" name="skill" checked="checked" value="Java"> Java
+        </label>
+    </div>
+</form>
+<div id="result"></div>
+
+<script>
+    var checkboxes = document.getElementsByName('skill');
+
+    var skills = [];
+
+    checkboxes.forEach(function (checkbox) {
+        if (checkbox.getAttribute('checked')) {
+            skills.push(checkbox.value);
+        }
+    });
+
+    document.getElementById('result').innerText = '选中的技能：' + skills.join('、');
+</script>
+</body>
+</html>

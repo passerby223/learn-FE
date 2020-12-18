@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <p>我是第一个段落。</p>
+    <p>我是第二个段落。</p>
+    <p>我是第三个段落。</p>
+    <p>我是第四个段落。</p>
+    <p>我是第五个段落。</p>
+</div>
+<div id="result" style="color: #4caf50;"></div>
+<script>
+    var pList = document.getElementsByTagName('p');
+
+    var res = [];
+    var i, len;
+    for (i = 0, len = pList.length; i < len; i++) {
+        res.push(pList[i].innerText);
+    }
+    console.log(res);
+    document.getElementById('result').innerHTML = '所有 p 标签的内容：<br>' + res.join('<br>');
+</script>
+</body>
+</html>

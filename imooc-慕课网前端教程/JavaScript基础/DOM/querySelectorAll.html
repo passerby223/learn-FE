@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>我是列表1</li>
+    <li>我是列表2</li>
+    <li>我是列表3</li>
+    <li>我是列表4</li>
+</ul>
+
+<button class="change">变！</button>
+
+<script>
+    var lis = document.querySelectorAll('li');
+    var btn = document.querySelector('.change');
+
+    btn.addEventListener('click', function() {
+        lis.forEach(function(li, index) {
+            li.innerText = index;
+        });
+    });
+</script>
+</body>
+</html>

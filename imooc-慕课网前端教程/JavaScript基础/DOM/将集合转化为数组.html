@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<div>-->
+<!--    <ul>-->
+<!--        <li>1</li>-->
+<!--        <li>2</li>-->
+<!--        <li>3</li>-->
+<!--    </ul>-->
+<!--</div>-->
+<div>
+    <ul>
+        <li>i</li>
+        <li>love</li>
+        <li>imooc</li>
+    </ul>
+</div>
+<script>
+    // 报错
+    // var lis = document.querySelectorAll('li');
+    //
+    // var filtered = lis.filter(function (li) {
+    //     return Number(li.innerText % 2);
+    // });
+
+    // 使用数组的 slice 方法可以满足需求
+
+
+    var lisColl = document.querySelectorAll('li');
+
+    var lisArray1 = [].slice.call(lisColl);
+    var lisArray2 = Array.prototype.slice.call(lisColl);
+
+    var map = function (li) {
+        return li.innerText;
+    };
+
+    console.log(lisArray1.map(map).join(' ')); // 输出：i love imooc
+    console.log(lisArray2.map(map).join(' ')); // 输出：i love imooc
+</script>
+
+</body>
+</html>
