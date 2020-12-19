@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    .change-bg {
+        border: 1px solid black;
+        height: 40px;
+        width: 120px;
+        border-radius: 2px;
+        margin-top: 16px;
+        outline: none;
+        cursor: pointer;
+    }
+
+    .change-bg:active {
+        background: #efefef;
+    }
+
+    .box {
+        width: 120px;
+        height: 120px;
+        background: #4caf50;
+        border-radius: 60px;
+    }
+</style>
+<div class="box"></div>
+
+<button class="change-bg">戳这里改变背景色</button>
+<script>
+    var boxEle = document.querySelector('.box');
+    var btnEle = document.querySelector('.change-bg');
+
+    // 随机生成一个颜色 具体实现可以不管
+    function getColor() {
+        return '#' + ('00000' + (Math.random() * 0x1000000 << 0).toString(16)).slice(-6);
+    }
+
+    btnEle.onclick = function () {
+        boxEle.style.backgroundColor = getColor();
+    };
+</script>
+</body>
+</html>
