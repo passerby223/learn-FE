@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="imooc"></div>
+<script type="text/javascript">
+    let lang = 'ES6';
+    // ES6之前的写法
+    // document.getElementById('imooc').innerHTML = '<h1>慕课网' + lang + ' Wiki</h1>' +
+    //     '<p>这里是慕课网Wiki，未经许可不能转载</p>' +
+    //     '<div>Wiki主要内容内容</div>';
+    // ES6之后使用模板字符串的写法
+    document.getElementById('imooc').innerHTML = `<h1>慕课网${lang}Wiki</h1>
+                                                 <p>这里是慕课网Wiki，未经许可不能转载</p>
+                                                 <div>Wiki主要内容内容</div>`;
+    // 对上述 DOM 进行插入操作，在有变量的地方把变量直接放入 ${} 大括号中即可。
+</script>
+
+</body>
+</html>
